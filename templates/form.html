@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dowry Calculator Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="gradient-bg">
+    <div class="form-container">
+        <h2>Dowry Calculator</h2>
+        <form action="{{ url_for('predict') }}" method="POST">
+
+            <label>State:</label>
+            <input type="text" name="State" required>
+
+            <label>Caste:</label>
+            <input type="text" name="Caste" required>
+
+            <label>Religion:</label>
+            <input type="text" name="Religion" required>
+
+            <label>Groom Age:</label>
+            <input type="number" name="Groom_Age" required>
+
+            <label>Bride Age:</label>
+            <input type="number" name="Bride_Age" required>
+
+            <label>Groom Education (Years):</label>
+            <input type="number" name="Groom_Education_Yrs" required>
+
+            <label>Bride Education (Years):</label>
+            <input type="number" name="Bride_Education_Yrs" required>
+
+            <label>Groom Monthly Income (₹):</label>
+            <input type="number" name="Groom_Income_Monthly" required>
+
+            <label>Bride Monthly Income (₹):</label>
+            <input type="number" name="Bride_Income_Monthly" required>
+
+            <label>Occupation:</label>
+            <input type="text" name="Occupation" required>
+
+            <label>Marriage Type:</label>
+            <select name="Marriage_Type" required>
+                <option value="">--Select--</option>
+                <option value="Arranged">Arranged</option>
+                <option value="Love">Love</option>
+            </select>
+
+            <label>Area:</label>
+            <input type="text" name="Area" required>
+
+            <label>Family Type:</label>
+            <select name="Family_Type" required>
+                <option value="">--Select--</option>
+                <option value="Joint">Joint</option>
+                <option value="Nuclear">Nuclear</option>
+            </select>
+
+            <button type="submit" class="btn">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
